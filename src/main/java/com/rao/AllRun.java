@@ -25,7 +25,7 @@ public class AllRun {
 		Thread.sleep(1000);
 		
 		//首页
-		Home.main(args);
+/*		Home.main(args);
 		Thread.sleep(1000);
 		
 		//果园管理-果园列表
@@ -63,7 +63,7 @@ public class AllRun {
 		Station.main(args);
 		Thread.sleep(1000);
 		
-		webDriver.navigate().refresh();
+		webDriver.navigate().refresh();*/
 		
 		//产品流通-入库管理
 		Instock.main(args);
