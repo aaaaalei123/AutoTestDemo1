@@ -51,20 +51,20 @@ public class Label {
 	    webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[1]/div/div/input")).click();
 	    Thread.sleep(1000);
 	    
-	    WebElement D = webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[14]"));
+	    WebElement D = webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[11]"));
 	    //循环点击键盘下键，直到元素可见
 	    Actions action333 = new Actions(webdriver);
 	    while(true){
 	     action333.sendKeys(D,Keys.DOWN).perform();
 	     // 使用try…catch…来判断元素是否可见，可见就进行元素操作并退出循环
 	     try {
-	      webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[14]"));
+	      webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[11]"));
 	      break;
 	     } catch (Exception e) {
 	     }
 	    }
 	    Thread.sleep(500);
-	    webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[14]")).click();
+	    webdriver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[11]")).click();
 	    Thread.sleep(500);
 	    webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[1]/button[1]/span")).click();
 	    
