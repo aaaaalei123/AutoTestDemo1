@@ -2,6 +2,7 @@ package com.rao;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.rao.tool.JudgeElement;
 import com.rao.tool.PageTool;
@@ -12,6 +13,7 @@ public class Garden {
 	public static void main(String[] args) throws InterruptedException, Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;	
 		JudgeElement judge = new JudgeElement();
+		Actions actions = new Actions(webdriver);
 		
 		/**
 		 * 
@@ -57,6 +59,7 @@ public class Garden {
 		Thread.sleep(1000);
 		webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div/div/div/table/tbody/tr[1]/td[7]/div/button[1]")).click();
 		
+		//判断果园详情是否有图集
 		if (judge.ElementExist(webdriver, By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")) == true) {
 			Thread.sleep(1000);
 			webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")).click();
@@ -66,19 +69,16 @@ public class Garden {
 			Thread.sleep(1000);
 			webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div[4]/div/div/button")).click();
 			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[2]/td[7]/div/button[1]")).click();
+			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[8]/td[7]/div/button[1]")).click();
 			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")).click();
+			actions.moveToElement(webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li"))).perform();
+			Thread.sleep(1000);
+			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li/span/span/i")).click();
 			Thread.sleep(1000);
 			webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();
 		}
 		
-		//查看果园图集并关闭
-/*		Thread.sleep(1000);
-		webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")).click();
-		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();*/
-		
+
 		//关闭详情界面
 		Thread.sleep(2000);
 		webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div[4]/div/div/button")).click();
