@@ -18,7 +18,7 @@ public class AllRun {
 		// 与浏览器同步非常重要，必须等待浏览器加载完毕
 		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//打开目标地址
-		webDriver.get("http://testorchdbs.yufengtek.com/admin/#/");
+		webDriver.get("");
 		
 		//登录
 		Login.main(args);
