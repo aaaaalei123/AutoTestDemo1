@@ -109,9 +109,9 @@ public class Systemcrop {
 		    Thread.sleep(1000);
 		    // 删除
 		    webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[12]/td[6]/div/button[2]")).click();
-		    Thread.sleep(500);
+		    Thread.sleep(1000);
 		    webdriver.findElement(By.xpath("/html/body/div[4]/div/div[3]/button[2]")).click();
-		    Thread.sleep(500);
+		    Thread.sleep(1000);
 		    
 	}
 }
