@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class PageTool {
 	@SuppressWarnings("static-access")
-	public static void main(String[] args) throws InterruptedException {
+	public void pageRun() throws InterruptedException {
 		PageTool pageTool = new PageTool();
 		WebDriver webdriver = WebDriverTool.webdriver;
 		Actions actions = new Actions(webdriver);

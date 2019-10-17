@@ -10,10 +10,11 @@ import com.rao.tool.WebDriverTool;
 
 public class Garden {
 
-	public static void main(String[] args) throws InterruptedException, Exception {
+	public void pageRun() throws InterruptedException, Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;	
 		JudgeElement judge = new JudgeElement();
 		Actions actions = new Actions(webdriver);
+		PageTool pageTool = new PageTool();
 		
 		/**
 		 * 
@@ -96,7 +97,7 @@ public class Garden {
 //		Thread.sleep(1000);
 //		webdriver.findElement(By.xpath("/html/body/div[2]/div/div[3]/button[2]")).click();
 				
-		PageTool.main(args);
+		pageTool.pageRun();
 		
 		
 	}

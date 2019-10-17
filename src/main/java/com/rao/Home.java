@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.rao.tool.WebDriverTool;
 
 public class Home {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		Actions actions = new Actions(webdriver);
 		

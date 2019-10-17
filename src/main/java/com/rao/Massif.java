@@ -11,7 +11,7 @@ import com.rao.tool.WebDriverTool;
 
 public class Massif {
 	@SuppressWarnings("static-access")
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		Actions actions = new Actions(webdriver);
 		PageTool pageTool = new PageTool();

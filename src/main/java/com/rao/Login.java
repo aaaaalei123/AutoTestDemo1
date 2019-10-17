@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.rao.tool.WebDriverTool;
 
 public class Login {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception{
 		WebDriver webdriver = WebDriverTool.webdriver;
 		
 		/**
@@ -20,6 +20,5 @@ public class Login {
 		webdriver.findElement(By.xpath("/html/body/div/div/div/div/form/div[2]/div/div/input")).sendKeys("abc123");
 		webdriver.findElement(By.cssSelector("span[class='el-checkbox__inner']")).click();
 		webdriver.findElement(By.cssSelector("button[class='el-button size submit el-button--primary']")).click();
-		
 	}
 }
