@@ -20,34 +20,42 @@ public class AllRun {
 		//打开目标地址
 		webDriver.get("http://testorchdbs.yufengtek.com/admin/#/");
 		
+		Login login = new Login();
+		Home home = new Home();
+		Garden garden = new Garden();
+		Massif massif = new Massif();
+		Farm farm = new Farm();
+		Plant plant = new Plant();
+		Pick pick = new Pick();
+		
 		//登录
-		Login.main(args);
+		login.pageRun();
 		Thread.sleep(1000);
 		
-		//首页
-		Home.main(args);
+/*		//首页
+		home.pageRun();
 		Thread.sleep(1000);
 		
 		//果园管理-果园列表
-		Garden.main(args);
+		garden.pageRun();
 		Thread.sleep(1000);
 		
 		//果园管理-地块列表
-		Massif.main(args);
-		Thread.sleep(1000);
+		massif.pageRun();
+		Thread.sleep(1000);*/
 		
 		webDriver.navigate().refresh();
 		
 		//农事活动-农事记录
-		Farm.main(args);
+		farm.pageRun();
 		Thread.sleep(1000);
 		
 		//农事活动-种植记录
-		Plant.main(args);
+		plant.pageRun();
 		Thread.sleep(1000);
 		
 		//农事活动-采摘记录
-		Pick.main(args);
+		pick.pageRun();
 		Thread.sleep(1000);
 	
 		
