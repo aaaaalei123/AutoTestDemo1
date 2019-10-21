@@ -44,15 +44,16 @@ public class Pick {
 		
 		//查看详情
 		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("button[type='button'][class='el-button el-button--success el-button--small is-plain']")).click();
-		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("span[class='el-upload-list__item-actions']")).click();
-		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("button[title='Zoom in/out'][class='pswp__button pswp__button--zoom']")).click();
+		webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[8]/div/button")).click();
+		
+		//查看果园农事图集
+		Thread.sleep(2000);
+		webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[3]/div/div[2]/form/div[7]/div/div/ul/li/span")).click();	
 		Thread.sleep(1000);
 		webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();
 		Thread.sleep(1000);
 		webdriver.findElement(By.cssSelector("i[class='el-dialog__close el-icon el-icon-close']")).click();
+		
 
 		
 		//切换每页显示条数

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import com.rao.tool.JudgeElement;
 import com.rao.tool.PageTool;
 import com.rao.tool.WebDriverTool;
 
@@ -13,6 +14,7 @@ public class Farm {
 	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		Actions actions = new Actions(webdriver);
+		JudgeElement judge = new JudgeElement();
 		PageTool pageTool = new PageTool();
 		
 		 //打开农事活动-农事记录界面
@@ -46,10 +48,10 @@ public class Farm {
 		//查看详情
 		Thread.sleep(2000);
 		webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[2]/div/div[3]/table/tbody/tr/td[8]/div/button")).click();
-		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("span[class='el-upload-list__item-actions']")).click();
-		Thread.sleep(1000);
-		webdriver.findElement(By.cssSelector("button[title='Zoom in/out'][class='pswp__button pswp__button--zoom']")).click();
+		
+		//查看果园农事图集
+		Thread.sleep(2000);
+		webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[3]/div/div[2]/form/div[7]/div/div/ul/li/span")).click();	
 		Thread.sleep(1000);
 		webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();
 		Thread.sleep(1000);

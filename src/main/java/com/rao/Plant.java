@@ -26,7 +26,7 @@ public class Plant {
 		Thread.sleep(1000);
 		webdriver.findElement(By.cssSelector("input[placeholder='选择物种名称']")).click();
 		Thread.sleep(1000);
-		webdriver.findElement(By.xpath("/html/body/div[2]/div/div/ul/li[2]")).click();
+		webdriver.findElement(By.xpath("//span[contains(., '脐橙')]")).click();
 		Thread.sleep(1000);
 		webdriver.findElement(By.cssSelector("button[type='button'][class='el-button el-button--success']")).click();
 		

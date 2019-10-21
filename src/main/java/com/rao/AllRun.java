@@ -48,16 +48,16 @@ public class AllRun {
 		Thread.sleep(1000);
 		
 		//首页
-		home.pageRun();
-		Thread.sleep(1000);
+/*		home.pageRun();
+		Thread.sleep(1000);*/
 		
 		//果园管理-果园列表
-		garden.pageRun();
+/*		garden.pageRun();
 		Thread.sleep(1000);
 		
 		//果园管理-地块列表
 		massif.pageRun();
-		Thread.sleep(1000);
+		Thread.sleep(1000);*/
 		
 		webDriver.navigate().refresh();
 		
