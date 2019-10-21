@@ -58,31 +58,22 @@ public class Garden {
 		
 		//点击果园详情
 		Thread.sleep(1000);
-		webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div/div/div/table/tbody/tr[1]/td[7]/div/button[1]")).click();
-		
+		webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[10]/td[7]/div/button[1]")).click();
+										
 		//判断果园详情是否有图集
-		if (judge.ElementExist(webdriver, By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")) == true) {
-			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li")).click();
+		if (judge.verifyElementIsPresent("//*[@id='app']/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li/span", "xpath") == true ) {
+			System.out.println("果园图集存在");
+			Thread.sleep(1500);
+			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li/span")).click();	
 			Thread.sleep(1000);
 			webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();
 		}else {
-			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div[4]/div/div/button")).click();
-			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[2]/div[1]/div[3]/table/tbody/tr[8]/td[7]/div/button[1]")).click();
-			Thread.sleep(1000);
-			actions.moveToElement(webdriver.findElement(By.xpath("/html/body/div/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li"))).perform();
-			Thread.sleep(1000);
-			webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[4]/div/div[2]/form/div[10]/div/div/ul/li/span/span/i")).click();
-			Thread.sleep(1000);
-			webdriver.findElement(By.cssSelector("button[title='Close (Esc)'][class='pswp__button pswp__button--close']")).click();
+			System.out.println("果园图集不存在");
 		}
 		
-
 		//关闭详情界面
 		Thread.sleep(2000);
-		webdriver.findElement(By.xpath("/html/body/div/div/div/section/div/div/div/div[4]/div/div/button")).click();
+		webdriver.findElement(By.xpath("//*[@id='app']/div/div[2]/section/div/div/div/div[4]/div/div[1]/button")).click();
 		
 		//点击果园删除按钮
 		Thread.sleep(1000);
