@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.rao.tool.WebDriverTool;
 
 public class Wiki {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		
 		// 进入作物百科页面

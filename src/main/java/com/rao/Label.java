@@ -10,7 +10,7 @@ import com.rao.tool.SetValue;
 import com.rao.tool.WebDriverTool;
 
 public class Label {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		
 		// 进入标签参数设定界面

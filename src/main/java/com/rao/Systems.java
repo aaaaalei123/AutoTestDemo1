@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.rao.tool.WebDriverTool;
 
 public class Systems {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		
 		// 系统参数设置

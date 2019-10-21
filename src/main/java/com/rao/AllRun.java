@@ -27,12 +27,27 @@ public class AllRun {
 		Farm farm = new Farm();
 		Plant plant = new Plant();
 		Pick pick = new Pick();
+		Monitor monitor = new Monitor();
+		Station station = new Station();
+		Instock instock = new Instock();
+		Outstock outstock = new Outstock();
+		Qrcode qrcode = new Qrcode();
+		User user = new User();
+		Admin admin = new Admin();
+		Feedback feedback = new Feedback();
+		Guide guide = new Guide();
+		Message message = new Message();
+		Wiki wiki = new Wiki();
+		Systems systems = new Systems();
+		Label label = new Label();
+		Systemcrop systemcrop = new Systemcrop();
+		
 		
 		//登录
 		login.pageRun();
 		Thread.sleep(1000);
 		
-/*		//首页
+		//首页
 		home.pageRun();
 		Thread.sleep(1000);
 		
@@ -42,7 +57,7 @@ public class AllRun {
 		
 		//果园管理-地块列表
 		massif.pageRun();
-		Thread.sleep(1000);*/
+		Thread.sleep(1000);
 		
 		webDriver.navigate().refresh();
 		
@@ -62,73 +77,73 @@ public class AllRun {
 		webDriver.navigate().refresh();
 		
 		//物联监控-监控管理
-		Monitor.main(args);
+		monitor.pageRun();
 		Thread.sleep(1000);
 		
 		//webDriver.navigate().refresh();
 		
 		//物联监控-监测站管理
-		Station.main(args);
+		station.pageRun();
 		Thread.sleep(1000);
 		
 		webDriver.navigate().refresh();
 		
 		//产品流通-入库管理
-		Instock.main(args);
+		instock.pageRun();
 		Thread.sleep(1000);
 		
 		//webDriver.navigate().refresh();
 		
 		//产品流通-入库管理
-		Outstock.main(args);
+		outstock.pageRun();
 		Thread.sleep(1000);
 		
 		webDriver.navigate().refresh();
 		
 		//审核管理-精品二维码审核
-		Qrcode.main(args);
+		qrcode.pageRun();
 		Thread.sleep(1000);
 		
 		//webDriver.navigate().refresh();
 		
 		//用户中心-用户管理
-		User.main(args);
+		user.pageRun();
 		Thread.sleep(1000);
 		
 		//用户中心-管理员管理
-		Admin.main(args);
+		admin.pageRun();
 		Thread.sleep(1000);
 		
 		webDriver.navigate().refresh();
 		
 		//用户中心-反馈管理
-		Feedback.main(args);
+		feedback.pageRun();
 		Thread.sleep(1000);
 		
 		webDriver.navigate().refresh();
 		
 		//设置-指南维护
-		Guide.main(args);
+		guide.pageRun();
 		Thread.sleep(1000);
 		
 		//设置-消息发布
-		Message.main(args);
+		message.pageRun();
 		Thread.sleep(1000);
 		
 		//设置-作物百科
-		Wiki.main(args);
+		wiki.pageRun();
 		Thread.sleep(1000);
 		
 		//设置-系统参数设置
-		Systems.main(args);
+		systems.pageRun();
 		Thread.sleep(1000);
 		
 		//设置-标签参数设定
-		Label.main(args);
+		label.pageRun();
 		Thread.sleep(1000);
 		
 		//设置-系统作物管理
-		Systemcrop.main(args);
+		systemcrop.pageRun();
 		Thread.sleep(1000);
 		
 		//退出浏览器

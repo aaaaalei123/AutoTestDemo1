@@ -7,7 +7,7 @@ import com.rao.tool.JudgeElement;
 import com.rao.tool.WebDriverTool;
 
 public class Qrcode {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		JudgeElement judge = new JudgeElement();
 		

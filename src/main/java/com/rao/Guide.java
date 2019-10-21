@@ -10,7 +10,7 @@ import com.rao.tool.JudgeElement;
 import com.rao.tool.WebDriverTool;
 
 public class Guide {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 		Actions action=new Actions(webdriver);
 		JudgeElement jude = new JudgeElement();

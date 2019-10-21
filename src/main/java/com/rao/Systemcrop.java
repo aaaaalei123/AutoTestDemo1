@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.rao.tool.WebDriverTool;
 
 public class Systemcrop {
-	public static void main(String[] args) throws Exception {
+	public void pageRun() throws Exception {
 		WebDriver webdriver = WebDriverTool.webdriver;
 			
         	//webdriver.findElement(By.xpath("/html/body/div/div/div[2]/aside/ul/li[8]/div")).click();
